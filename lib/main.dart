@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:task_manager_app/src/logic/theme/theme_cubit.dart';
+import 'package:task_manager_app/src/cubit/theme/theme_cubit.dart';
 import 'package:task_manager_app/src/splash/splash_cubit.dart';
 import 'package:task_manager_app/src/splash/splash_screen.dart';
 
