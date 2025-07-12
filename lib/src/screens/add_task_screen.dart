@@ -27,6 +27,21 @@ class _AddTaskScreenState extends State<AddTaskScreen> {
       // ✅ SAVE to SharedPreferences
       await TaskStorageService.addTask(newTask);
 
+      ScaffoldMessenger.of(context).showSnackBar(
+        SnackBar(
+          content: const Text(
+            '✅ Task added successfully!',
+            style: TextStyle(color: Colors.white),
+          ),
+          backgroundColor: Colors.green,
+          duration: const Duration(seconds: 2),
+          behavior: SnackBarBehavior.floating,
+        ),
+      );
+
+      // ✅ Close the screen after a short delay (to show the SnackBar)
+      await Future.delayed(const Duration(milliseconds: 300));
+
       // ✅ Optionally return the task back
       Navigator.pop(context, newTask);
     }
